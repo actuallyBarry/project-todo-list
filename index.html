@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="icon" href="img/favicon.ico">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header><img src="img/clipboard-check-outline.svg"><h1>TO-DO</h1></header>
+
+    <div id="sidebar">
+        <div id="sidebar-all" data-title="pool"><img src="img/tray-full.svg"><span>All tasks</span><span class="count"></span></div>
+        <div id="sidebar-today" data-title="today"><img src="img/calendar-today-outline.svg"><span>Today</span><span class="count"></span></div>
+        <div id="sidebar-week" data-title="week"><img src="img/calendar-week-outline.svg"><span>Next 7 days</span><span class="count"></span></div>
+        <hr>
+        <div><img src="img/lightbulb-on-outline.svg"><b>My Lists</b></div>
+        <div id="sidebar-categories"></div>
+        <div id="lower-sb">
+            <div id="screen">
+                <svg class="plus-icon" style="width:24px;height:24px" viewBox="0 0 24 24"><path class="plus-icon"  fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></svg><span>New List</span>
+            </div>
+            <input id="sidebar-add-category" class="hide-input" placeholder="e.g. school-stuff" maxlength="16">
+            <button class="hide-input">Add</button>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <div id="header-title">
+                <h2 contenteditable=false></h2>
+                <button>Rename</button>
+            </div>
+            <div id="header-btns">
+                <svg viewBox="0 0 24 24" class="category-edit"><path></svg>
+                <svg viewBox="0 0 24 24" class="category-delete"><path></svg>
+            </div>
+        </div>
+        <div id="list"></div>
+        <div id="footer-btn">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></svg><span>Add a Task</span>
+        </div>
+        <button id="navigator"></button>
+        <!-- <div>Photo by 
+            <a href="https://unsplash.com/@silasbaisch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Silas Baisch</a> on <a href="https://unsplash.com/photos/f4bfvVXKZP8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </div> -->
+    </div>
+
+    <div class="add-modal">
+        <div id="add-form">
+            <span class="add-close-button">&times;</span>
+            <input id="add-form-title" placeholder="Title" maxlength=20>
+            <textarea id="add-form-description" placeholder="Description" maxlength="40"></textarea>
+            <label for="add-form-duedate">Due Date:</label>
+            <input type="date" id="add-form-duedate">
+            <label for="add-form-priority">Priority:</label>
+            <select id="add-form-priority">
+                <option value="none">-none-</option>
+                <option selected>low</option>
+                <option>medium</option>
+                <option>high</option>
+            </select>
+            <label for="add-form-category">List:</label>
+            <input id="add-form-category" list="category-input-options" placeholder="My_custom_list" maxlength="16">
+            <datalist id="category-input-options"></datalist>
+            <button>Add Todo</button>
+        </div>
+    </div>
+
+    <div class="edit-modal">
+        <div id="edit-form">
+            <span class="edit-close-button">&times;</span>
+            <input id="edit-form-title" placeholder="Title" maxlength=20>
+            <textarea id="edit-form-description" placeholder="Description" maxlength=40></textarea>
+            <label for="edit-form-duedate">Due Date:</label>
+            <input type="date" id="edit-form-duedate">
+            <label for="edit-form-priority">Priority:</label>
+            <select id="edit-form-priority">
+                <option value="none">-none-</option>
+                <option>low</option>
+                <option>medium</option>
+                <option>high</option>
+            </select>
+            <label for="edit-form-category">List:</label>
+            <input id="edit-form-category" list="category-input-options" placeholder="My_custom_list" maxlength="16">
+            <button>Confirm</button>
+        </div>
+    </div>
+
+    <div class="detail-modal">
+        <div id="details">
+            <span class="details-close-button">&times;</span>
+            <h2 id="details-title"></h2>
+            <p>Description:</p>
+            <p id="details-description"></p>
+            <p>Created:</p>
+            <p id="details-created"></p>
+            <p>Due Date:</p>
+            <p id="details-duedate"></p>
+            <p>Priority:</p>
+            <p id="details-priority"></p>
+            <p>List:</p>
+            <p id="details-category"></p>
+        </div>
+    </div>
+</body>
+</html>
