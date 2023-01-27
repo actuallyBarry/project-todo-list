@@ -1,0 +1,11 @@
+//! categories
+
+//! currentLsTtl + categories
+
+//! pool
+
+//! pool + categories
+
+//! pool + categories + currentLsTtl
+
+//! pool + categories + today + week
