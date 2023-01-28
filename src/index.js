@@ -304,7 +304,7 @@ sbAddCategoryBtn.addEventListener('click', () => {
 // remove category and its tasks
 const categoryDelBtn = document.querySelector('.category-delete');
 categoryDelBtn.addEventListener('click', () => {
-    if (!confirm("This list and all its will be deleted!")) {return}
+    if (!confirm("This list and all its tasks will be deleted!")) {return}
     deleteCategory(currentLsTtl);
     displaySbCategories();
     currentList('pool');

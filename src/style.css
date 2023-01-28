@@ -417,9 +417,7 @@ svg  {
 [id$="form-title"],
 [id$="form-description"] {
     grid-area: 1/1/2/3;
-    border: 0;
     width: 90%;
-    padding: .1rem;
 }
 [id$="form-description"] {
     resize: none;
