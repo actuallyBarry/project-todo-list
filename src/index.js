@@ -414,3 +414,6 @@ window.addEventListener('click', (e) => {
 })
 const detailsCloseBtn = document.querySelector('.details-close-button');
 detailsCloseBtn.addEventListener('click', () => toggleModal('details'));
+
+//
+console.log(categories)
