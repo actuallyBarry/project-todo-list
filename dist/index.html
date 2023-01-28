@@ -23,6 +23,7 @@
                 <svg class="plus-icon" style="width:24px;height:24px" viewBox="0 0 24 24"><path class="plus-icon"  fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></svg><span>New List</span>
             </div>
             <input id="sidebar-add-category" class="hide-input" placeholder="e.g. school-stuff" maxlength="16">
+            <p id="sb-helper-text">*Cannot contain space and special characters or start with a digit.</p>
             <button class="hide-input">Add</button>
         </div>
     </div>
@@ -51,7 +52,8 @@
     <div class="add-modal">
         <div id="add-form">
             <span class="add-close-button">&times;</span>
-            <input id="add-form-title" placeholder="Title" maxlength=20>
+            <input id="add-form-title" placeholder="Title" maxlength=20 required>
+            <p id="add-helper-text">*Cannot be empty or the same as an already existing todo.</p>
             <textarea id="add-form-description" placeholder="Description" maxlength="40"></textarea>
             <label for="add-form-duedate">Due Date:</label>
             <input type="date" id="add-form-duedate">
@@ -72,7 +74,8 @@
     <div class="edit-modal">
         <div id="edit-form">
             <span class="edit-close-button">&times;</span>
-            <input id="edit-form-title" placeholder="Title" maxlength=20>
+            <input id="edit-form-title" placeholder="Title" maxlength=20 required>
+            <p id="edit-helper-text">*Cannot be empty or the same as an already existing todo.</p>
             <textarea id="edit-form-description" placeholder="Description" maxlength=40></textarea>
             <label for="edit-form-duedate">Due Date:</label>
             <input type="date" id="edit-form-duedate">
