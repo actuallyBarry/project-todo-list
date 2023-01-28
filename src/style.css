@@ -115,6 +115,16 @@ hr {
     letter-spacing: 1px;
 }
 
+#sb-helper-text {
+    position: absolute;
+    top: 0;
+    font-size: .8rem;
+    color: #9c5b10;
+    visibility: hidden;
+}
+#sidebar-add-category:focus + #sb-helper-text {
+    visibility: visible;
+}
 #sidebar-add-category {
     width: 90%;
     font-size: 1rem;
@@ -396,6 +406,22 @@ svg  {
 }
 
 /* ===================================================== */
+#add-helper-text,
+#edit-helper-text {
+    position: absolute;
+    top: 2px;
+    left: .5rem;
+    font-size: .7rem;
+    color: #9c5b10;
+    visibility: hidden;
+}
+#add-form-title:invalid + #add-helper-text {
+    visibility: visible;
+}
+#edit-form-title:invalid + #edit-helper-text {
+    visibility: visible;
+}
+
 #add-form label,
 #edit-form label {
     color: rgb(115, 115, 115);

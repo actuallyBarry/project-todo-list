@@ -364,7 +364,11 @@ window.addEventListener('click', (e) => {
 
 // handle add modal
 const addInitBtn = document.querySelector('#main #footer-btn');
-addInitBtn.addEventListener('click', () => { toggleModal('add'); resetAddInputs() });
+addInitBtn.addEventListener('click', () => {
+    toggleModal('add');
+    resetAddInputs();
+    document.querySelector('#add-form-title').focus()
+})
 const addBtn = document.querySelector('#add-form button');
 addBtn.addEventListener('click', () => {
     if(!addTskInpIsValid()) { return }
@@ -410,4 +414,3 @@ window.addEventListener('click', (e) => {
 })
 const detailsCloseBtn = document.querySelector('.details-close-button');
 detailsCloseBtn.addEventListener('click', () => toggleModal('details'));
-
