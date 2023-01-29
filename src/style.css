@@ -59,6 +59,8 @@ header h1 {
     padding: 2px 8px;
     margin-bottom: 3px;
     letter-spacing: 1px;
+    /* justify-content: space-between; */
+    width: 100%;
 }
 
 #sidebar span,
@@ -92,7 +94,8 @@ hr {
     position: relative;
     margin: auto -1rem -1rem;
     padding: 0 .6rem;
-    height: max(4rem, 6vh);
+    /* height: max(4rem, 6vh); */
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
